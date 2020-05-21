@@ -1,0 +1,31 @@
+.header-color {
+    background-color: #A8D0E6;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logo-img {
+    width: 70px;
+    height: 50px;
+}
+
+.logo-name {
+    width: 300px;
+    height: 50px;
+}
+
+.account-icon {
+    width: 40px;
+    height: 35px;
+    padding-left: 10%;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    background-color: #f8e9a1;
+    border-radius: 15px;
+    font-weight: bold;
+    color: black;
+}
