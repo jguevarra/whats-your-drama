@@ -1,0 +1,77 @@
+body {
+  background-color: #374785;
+}
+
+.container {
+  padding-top: 3%;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  text-align: center;
+  background-color: #f1f1f1;
+  height: 700px;
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
+.title {
+  padding-top: 5%;
+  color: grey;
+  font-size: 18px;
+}
+
+.star-ratings {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+}
+
+.checked {
+  color: #ffe355;
+}
+
+/* parallax styling */
+
+body {
+  margin: 0;
+}
+
+h1,
+h2 {
+  padding-top: 10vh;
+  color: white;
+  text-align: center;
+}
+
+.mb_parallax_container {
+  height: 100%;
+  padding-top: 5%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mb_parallax_overlay {
+  height: 60vh;
+  width: 60vw;
+  margin-left: 10%;
+  opacity: .9;
+}
+
+
+#mb_parallax_one {
+  background-image: url("/assets/images/drama.jpg");
+}
+
+
+/* https://codepen.io/mabarbeau/pen/EjWNWP */

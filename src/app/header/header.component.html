@@ -8,8 +8,8 @@
 <nav class="navbar navbar-expand-lg header-color">
     <div class="container-fluid">
         <div class="navbar-left">
-            <img class="logo-img" src="../assets/images/logo-img.png" routerLink="/testing" routerLinkActive="active">
-            <img class="logo-name" src="../assets/images/logo-name.png" routerLink="/testing" routerLinkActive="active">
+            <img class="logo-img" src="../assets/images/logo-img.png" routerLink="/" routerLinkActive="active">
+            <img class="logo-name" src="../assets/images/logo-name.png" routerLink="/" routerLinkActive="active">
         </div>
 
         <ng-container *ngIf="(user$ | async) as user; else loginButtonContainer"> <!--If a user is logged in-->

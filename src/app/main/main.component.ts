@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth/auth.service';
+import { EMPTY, Observable, of, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-main',
@@ -6,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-
-  constructor() { }
+  user$: Observable<firebase.User> = this.auth.user$;
+  constructor(
+    private readonly auth: AuthService
+  ) { }
 
   ngOnInit(): void {
   }

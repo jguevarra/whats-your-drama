@@ -21,6 +21,7 @@
 
 a {
     color: black;
+    font-size: medium;
 }
 
 a:hover {
@@ -28,4 +29,5 @@ a:hover {
     border-radius: 15px;
     font-weight: bold;
     color: black;
+    font-size: medium;
 }

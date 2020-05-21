@@ -1,1 +1,84 @@
-<p>main works!</p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<ng-container *ngIf="(user$ | async) as user; else loginPageContainer">
+<div class="container">
+        <div class="row">
+            <div class="col-lg">
+                <div class="card grow">
+                    <img src="../assets/images/cloy.jpg" alt="Crash Landing on You" style="width:100%">
+                    <p class="title">Crash Landing on You</p>
+                    <p><b>Cast:</b> Hyun Bin, Son Ye-Jin</p>
+                    <p><b>Aired:</b> December 14, 2019</p>
+                    <p>
+                        <a href="#">#Romance </a>
+                    </p><br>
+                    <p class="star-ratings">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg">
+                <div class="card grow">
+                    <img src="../assets/images/itaewon.jpg" alt="Itaewon" style="width:100%">
+                    <p class="title">Itaewon Class</p>
+                    <p><b>Cast:</b> Park Seo-Joon, Kim Da-Mi</p>
+                    <p><b>Aired:</b> January 31, 2020</p>
+                    <p>
+                        <a href="#">#Drama </a>
+                    </p><br>
+                    <p class="star-ratings">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </p>
+                </div>
+            </div>
+  
+            <div class="col-lg">
+                <div class="card grow">
+                    <img src="../assets/images/king.jpg" alt="The King: Eternal Monarch" style="width:100%">
+                    <p class="title">The King: Eternal Monarch</p>
+                    <p><b>Cast:</b> Lee Min-Ho, Kim Go-Eun</p>
+                    <p><b>Aired:</b> April 17, 2020</p>
+                    <p>
+                        <a href="#">#Sageuk </a>
+                        <a href="#">#SciFi </a>
+                        <a href="#">#TimeTravel </a>
+                        <a href="#">#Romance </a>
+                    </p><br>
+                    <p class="star-ratings">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </p>
+                </div>
+            </div>
+  
+        </div>
+</div>
+</ng-container>
+
+<ng-template #loginPageContainer>
+    <div class="mb_parallax_container" id="mb_parallax_one">
+        <div class="mb_parallax_overlay">
+            <img src="../assets/images/name.png">
+        </div>
+    </div>
+</ng-template>
+    
+</body>
