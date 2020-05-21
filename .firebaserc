@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "whats-your-drama": {
+      "hosting": {
+        "kdrama": [
+          "whats-your-drama"
+        ]
+      }
+    }
+  }
+}

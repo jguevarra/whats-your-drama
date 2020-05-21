@@ -1,34 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { MainpageComponent } from './mainpage/mainpage.component';
-import { FooterComponent } from './footer/footer.component';
-import { HeaderComponent } from './header/header.component';
-import { DramasComponent } from './dramas/dramas.component';
-import { ForumComponent } from './forum/forum.component';
-import { GenreComponent } from './genre/genre.component';
-import { NewsComponent } from './news/news.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material.module';
+import { AppFirebaseModule } from './app-firebase.module';
+import { AppRoutingModule } from './app-routing.module';
+
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProfileCardComponent } from './profile-card/profile-card.component';
+import { MainComponent } from './main/main.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainpageComponent,
-    FooterComponent,
     HeaderComponent,
-    DramasComponent,
-    ForumComponent,
-    GenreComponent,
-    NewsComponent
+    ProfileCardComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AppMaterialModule
+    AppMaterialModule,
+    AppFirebaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
