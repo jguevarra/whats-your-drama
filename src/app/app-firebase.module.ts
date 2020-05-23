@@ -1,18 +1,25 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
+// Firebase main module
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+
+// Firebase other modules
 import { AngularFireAuthModule } from '@angular/fire/auth';
+// import { AngularFirestoreModule } from '@angular/fire/firestore';
+// import { AngularFirestoreModule } from 'angularfire2/firestore';
+
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
     AngularFireModule.initializeApp(environment.firebase),
   ],
   exports: [
     AngularFireAuthModule, 
-    AngularFireModule
+    AngularFireModule,
+    // AngularFirestoreModule // Only required for database features
+    // AngularFirestoreModule // Only required for database features
   ]
 })
 export class AppFirebaseModule { }

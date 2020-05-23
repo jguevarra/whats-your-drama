@@ -27,7 +27,13 @@
                     <a class="nav-link" routerLink="/news" routerLinkActive="active">News</a>
                 </li>
             </ul>
-            <a class="nav-link" (click)="logout()">Logout</a>
+            <!--<a class="nav-link">{{ user.displayName }}</a>
+            <img [src]="user.photoURL">
+            <a class="nav-link" (click)="logout()">Logout</a>-->
+            <a class="nav-link" (click)="logout()">
+                <img class="user-icon" [src]="user.photoURL">
+            </a>
+              
         </ng-container>
 
         <ng-template #loginButtonContainer> <!--If a user is logged out-->

@@ -6,7 +6,7 @@
 
 <body>
 
-<ng-container *ngIf="(user$ | async) as user; else loginPageContainer">
+<ng-container *ngIf="(user$ | async) as user; else loginPageContainer"> <!--if user is logged in-->
 <div class="container">
         <div class="row">
             <div class="col-lg">
@@ -73,12 +73,14 @@
 </div>
 </ng-container>
 
-<ng-template #loginPageContainer>
+<ng-template #loginPageContainer> <!--if user is not logged in-->
     <div class="mb_parallax_container" id="mb_parallax_one">
         <div class="mb_parallax_overlay">
-            <img src="../assets/images/name.png">
+            <img class="img-size" src="../assets/images/name.png">
         </div>
     </div>
 </ng-template>
     
+
+
 </body>

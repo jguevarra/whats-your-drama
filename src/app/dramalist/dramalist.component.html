@@ -1,0 +1,7 @@
+<p>dramalist works! boop</p>
+
+<ul>
+            <li *ngFor="let item of items | async">
+                <pre>{{ item | json }}</pre>
+            </li>
+        </ul>
