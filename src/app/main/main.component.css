@@ -1,10 +1,10 @@
-body {
+.blue {
   background-color: #374785;
 }
 
-.container {
+/* .container {
   padding-top: 3%;
-}
+} */
 
 /* Style the counter cards */
 .card {

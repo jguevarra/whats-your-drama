@@ -6,6 +6,8 @@
 
 <body>
 
+<div class="blue">
+
 <ng-container *ngIf="(user$ | async) as user; else loginPageContainer"> <!--if user is logged in-->
 <div class="container">
         <div class="row">
@@ -73,6 +75,7 @@
 </div>
 </ng-container>
 
+
 <ng-template #loginPageContainer> <!--if user is not logged in-->
     <div class="mb_parallax_container" id="mb_parallax_one">
         <div class="mb_parallax_overlay">
@@ -80,7 +83,6 @@
         </div>
     </div>
 </ng-template>
-    
 
-
+</div>
 </body>

@@ -1,7 +1,19 @@
-<p>dramalist works! boop</p>
-
-<ul>
-            <li *ngFor="let item of items | async">
-                <pre>{{ item | json }}</pre>
-            </li>
-        </ul>
+<div class="blue">
+<div class="container">
+    <div class="row">
+    <div *ngFor="let item of items | async">
+        <div class="col-md-4">
+            <div class="padding-under">
+                <div class="card" style="width: 21rem;">
+                    <img class="image-block" [src]="item.imgURL" [title]="item.title" style="width: 100%;">
+                    <div class="card-body">
+                        <h3>{{ item.title }}</h3>
+                        <!--<p class="proile-rating">AVERAGE RATING : <span>5/5</span></p>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
