@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppMaterialModule } from './app-material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-// import { AppFirebaseModule } from './app-firebase.module';
+import { AppFirebaseModule } from './app-firebase.module';
 
 // Components
 import { AppComponent } from './app.component';
@@ -12,12 +12,8 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './main/main.component';
 import { DramalistComponent } from './dramalist/dramalist.component';
-
-// Firebase Modules
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { environment } from '../environments/environment';
+import { LandingComponent } from './landing/landing.component';
+import { DramaDetailsComponent } from './drama-details/drama-details.component';
 
 
 @NgModule({
@@ -25,17 +21,16 @@ import { environment } from '../environments/environment';
     AppComponent,
     HeaderComponent,
     MainComponent,
-    DramalistComponent
+    DramalistComponent,
+    LandingComponent,
+    DramaDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     AppMaterialModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule, 
-    AngularFireModule,
-    AngularFireDatabaseModule
+    AppFirebaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
