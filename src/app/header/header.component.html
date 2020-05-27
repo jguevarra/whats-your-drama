@@ -12,7 +12,11 @@
             <img class="logo-name" src="../assets/images/logo-name.png" routerLink="/" routerLinkActive="active">
         </div>
 
-        <ng-container *ngIf="(user$ | async) as user; else loginButtonContainer"> <!--If a user is logged in-->
+        <div *ngIf="auth.user$ | async; then authenticated else loginButtonContainer"> <!--If a user is logged in-->
+        </div>
+
+        <ng-template #authenticated> <!--If a user is logged out-->
+        <div *ngIf="auth.user$ | async as user">
             <ul class="nav navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/dramalist" routerLinkActive="active">Dramas</a>
@@ -30,16 +34,16 @@
             <!--<a class="nav-link">{{ user.displayName }}</a>
             <img [src]="user.photoURL">
             <a class="nav-link" (click)="logout()">Logout</a>-->
-            <a class="nav-link" (click)="logout()">
+            <a class="nav-link" (click)="auth.logout()">
                 <img class="user-icon" [src]="user.photoURL">
             </a>
-              
-        </ng-container>
+        </div>
+        </ng-template>
 
         <ng-template #loginButtonContainer> <!--If a user is logged out-->
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-item">
-                    <a class="nav-link" (click)="login()">
+                    <a class="nav-link" (click)="auth.googleLogin()">
                         <img class="account-icon" src="../assets/images/account.webp">
                     </a>
                 </li>

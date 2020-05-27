@@ -8,9 +8,8 @@ import { EMPTY, Observable, of, Subject } from 'rxjs';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  user$: Observable<firebase.User> = this.auth.user$;
   constructor(
-    private readonly auth: AuthService
+    public auth: AuthService
   ) { }
 
   ngOnInit(): void {
