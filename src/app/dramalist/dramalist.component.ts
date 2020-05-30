@@ -26,7 +26,6 @@ export class DramalistComponent implements OnInit {
 
   constructor(public db: AngularFirestore) 
   {
-    // this.items = db.collection('/dramas').valueChanges({ idField: 'dramaId' });
     this.items = this.db.collection<Drama>('dramas')
          .snapshotChanges().pipe(
            map(actions => actions.map(a => {

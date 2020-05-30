@@ -13,19 +13,19 @@
                 <p>Directors: {{ drama.directors }}</p><br>
                 <p>{{ drama.desc }}</p><br>
                 
-                <div class="scroll-box"> <!--might turn into a separate component-->
-                    <blockquote>People who think they know everything are a great annoyance to those of us who do. <i>Isaac Asimov</i></blockquote>
-                    <blockquote>People who think they know everything are a great annoyance to those of us who do. <i>Isaac Asimov</i></blockquote>
-                    <blockquote>People who think they know everything are a great annoyance to those of us who do. <i>Isaac Asimov</i></blockquote>
-                    <blockquote>People who think they know everything are a great annoyance to those of us who do. <i>Isaac Asimov</i></blockquote>
-                    <blockquote>People who think they know everything are a great annoyance to those of us who do. <i>Isaac Asimov</i></blockquote>
-                </div>
+                <hr>
+
+                <app-star-review [userId]="user_Id" [dramaId]="drama_Id" ></app-star-review>
             </div>
 
         </div>
+
+        
     </div>
 
 </div>
+
+
 
 
 

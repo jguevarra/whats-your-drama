@@ -5,9 +5,8 @@ import * as firebase from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
-// import { User } from 'src/app/user';
 
-import { BehaviorSubject, Observable, from, of } from 'rxjs';
+import { Observable, from, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
 interface User {

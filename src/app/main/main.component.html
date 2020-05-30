@@ -4,29 +4,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body>
-
 <div class="blue">
+    <ng-container *ngIf="auth.user$ | async; then authenticated else landingPage"></ng-container> <!--if user is logged in-->
+</div>
 
-<ng-container *ngIf="(auth.user$ | async) as user; else loginPageContainer"> <!--if user is logged in-->
-<div class="container">
+<ng-template #authenticated>
+    <div class="container" *ngIf="auth.user$ | async as user">
         <div class="row">
             <div class="col-lg">
                 <div class="card grow">
                     <img src="../assets/images/cloy.jpg" alt="Crash Landing on You" style="width:100%">
-                    <p class="title">Crash Landing on You</p>
+                    <p class="title">Testing</p>
                     <p><b>Cast:</b> Hyun Bin, Son Ye-Jin</p>
-                    <p><b>Aired:</b> December 14, 2019</p>
                     <p>
                         <a href="#">#Romance </a>
                     </p><br>
-                    <p class="star-ratings">
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star checked"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                    </p>
                 </div>
             </div>
 
@@ -72,17 +64,13 @@
             </div>
   
         </div>
-</div>
-</ng-container>
+    </div>
+</ng-template>
 
-
-<ng-template #loginPageContainer> <!--if user is not logged in-->
+<ng-template #landingPage> <!--if user is not logged in-->
     <div class="mb_parallax_container" id="mb_parallax_one">
         <div class="mb_parallax_overlay">
             <img class="img-size" src="../assets/images/name.png">
         </div>
     </div>
 </ng-template>
-
-</div>
-</body>

@@ -14,6 +14,7 @@ import { MainComponent } from './main/main.component';
 import { DramalistComponent } from './dramalist/dramalist.component';
 import { LandingComponent } from './landing/landing.component';
 import { DramaDetailsComponent } from './drama-details/drama-details.component';
+import { StarReviewComponent } from './star-review/star-review.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { DramaDetailsComponent } from './drama-details/drama-details.component';
     MainComponent,
     DramalistComponent,
     LandingComponent,
-    DramaDetailsComponent
+    DramaDetailsComponent,
+    StarReviewComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,9 @@ import { DramaDetailsComponent } from './drama-details/drama-details.component';
     BrowserAnimationsModule,
     AppMaterialModule,
     AppFirebaseModule
+  ],
+  exports: [
+    StarReviewComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
